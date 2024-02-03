@@ -22,6 +22,7 @@ def call() {
                         expression { env.TAG_NAME == null }
                     }
                 }
+
                 steps {
                     echo 'Hello World'
                 }
