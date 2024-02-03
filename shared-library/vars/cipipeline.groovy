@@ -17,7 +17,7 @@ def call() {
 
             stage('Code Quality') {
                 when {
-                    allof {
+                    allOf {
                         expression { env.BRANCH_NAME != null }
                         expression { env.TAG_NAME == null }
                     }
