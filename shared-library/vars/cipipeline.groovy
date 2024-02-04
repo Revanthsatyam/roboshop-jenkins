@@ -8,7 +8,7 @@ def call() {
       env.branch_name = "${env.BRANCH_NAME}"
     }
     checkout scmGit(
-        branches: [[name: 'stable-3.x']],
+        branches: [[name: branch_name]],
         userRemoteConfigs: [[url: "https://github.com/Revanthsatyam/${component}"]]
     )
 
