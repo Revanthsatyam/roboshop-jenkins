@@ -16,12 +16,16 @@ def call() {
       common.compile()
     }
 
-    stage('Test') {
-      print 'Hello'
-    }
+    if(en.TAG_NAME == null) {
 
-    stage('Code Quality') {
-      print 'Hello'
+      stage('Test') {
+        print 'Hello'
+      }
+
+      stage('Code Quality') {
+        print 'Hello'
+      }
+
     }
 
     stage('Code Security') {
