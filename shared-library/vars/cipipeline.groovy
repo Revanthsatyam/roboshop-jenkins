@@ -16,7 +16,7 @@ def call() {
       common.compile()
     }
 
-    if(en.TAG_NAME == null) {
+    if(env.TAG_NAME == null) {
 
       stage('Test') {
         print 'Hello'
