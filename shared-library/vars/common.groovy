@@ -9,7 +9,7 @@ def compile() {
     }
 
     if (env.codeType == "nodejs") {
-      print 'NodeJS'
+      sh 'npm install'
     }
   }
 }
