@@ -24,7 +24,7 @@ def test() {
       sh 'npm test'
     }
 
-    if (env.codeType == "nodejs") {
+    if (env.codeType == "python") {
       sh 'python -m unittest'
     }
   }
