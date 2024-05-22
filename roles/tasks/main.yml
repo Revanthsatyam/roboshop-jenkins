@@ -1,0 +1,7 @@
+- name: Create Job For Singlebranch Pipeline
+  ansible.builtin.include_tasks:
+    file: sjob.yml
+
+- name: Create Job For Multibranch Pipeline
+  ansible.builtin.include_tasks:
+    file: mjob.yml
