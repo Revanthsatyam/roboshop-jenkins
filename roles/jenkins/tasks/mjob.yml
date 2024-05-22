@@ -6,7 +6,7 @@
 - name: Create Multi Branch pipeline job
   community.general.jenkins_job:
     config: "{{ lookup('file', 'templates/mjob.xml') }}"
-    name: mjob.xml
+    name: mjob
     password: Devops@74
     url: http://172.31.32.213:8080
     user: admin
