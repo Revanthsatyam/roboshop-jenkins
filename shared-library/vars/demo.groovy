@@ -11,7 +11,7 @@ def call() {
     agent any
 
     stages {
-      stage('Compile Code') {
+      stage('Compile') {
         steps {
           echo 'Hello World'
           script {
