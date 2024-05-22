@@ -1,5 +1,5 @@
 - name: Create Jenkins Jobs
-  host: localhost
+  hosts: localhost
   roles:
     - jenkins
   vars:
