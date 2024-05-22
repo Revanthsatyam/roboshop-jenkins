@@ -1,7 +1,7 @@
-- name: Copy Config - {{ item.folder_name }}
-  ansible.builtin.template:
-    src: folder.xml
-    dest: /tmp/folder.xml
+#- name: Copy Config - {{ item.folder_name }}
+#  ansible.builtin.template:
+#    src: folder.xml
+#    dest: /tmp/folder.xml
 
 - name: Create Job - {{ item.folder_name }}
   community.general.jenkins_job:
