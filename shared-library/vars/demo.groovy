@@ -15,8 +15,8 @@ def call(){
         steps {
           echo 'Hello World'
           script {
-            demo.info 'Starting'
-            demo.warning 'Nothing to do!!'
+            log.info 'Starting'
+            log.warning 'Nothing to do!!'
           }
         }
       }
