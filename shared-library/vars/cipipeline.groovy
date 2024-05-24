@@ -17,6 +17,9 @@ def call() {
       }
 
       stage('Code Quality') {
+        when {
+          expression { env.BRANCH_NAME != null }
+        }
         steps {
           echo 'Hello World'
         }
