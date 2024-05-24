@@ -24,7 +24,7 @@ def call() {
 
       stage('Code Security') {
         when {
-          env.BRANCH_NAME ==~ "main"
+          expression { env.BRANCH_NAME ==~ "main" }
         }
         steps {
           sh 'env'
