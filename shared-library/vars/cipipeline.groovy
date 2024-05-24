@@ -29,6 +29,9 @@ def call() {
       }
 
       stage('Release') {
+        when {
+          expression { env.TAG_NAME != null }
+        }
         steps {
           echo 'Hello World'
         }
