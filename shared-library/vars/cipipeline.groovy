@@ -6,6 +6,7 @@ def call() {
 
       stage('Compile Code') {
         steps {
+          sh 'env'
           echo 'Hello World'
         }
       }
@@ -17,6 +18,12 @@ def call() {
       }
 
       stage('Code Quality') {
+        when {
+          allOf {
+            expression { env.BRANCH_NAME != null }
+            expression { env.TAG_NAME == null }
+          }
+        }
         steps {
           echo 'Hello World'
         }
@@ -36,6 +43,7 @@ def call() {
           expression { env.TAG_NAME != null }
         }
         steps {
+          sh 'env'
           echo 'Hello World'
         }
       }
