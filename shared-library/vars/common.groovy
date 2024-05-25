@@ -1,4 +1,4 @@
-def common() {
+def compile() {
 
   if (env.codeType == "nodejs") {
     print 'NodeJs'
