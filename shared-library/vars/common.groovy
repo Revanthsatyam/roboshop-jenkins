@@ -1,5 +1,9 @@
 def compile() {
 
+  if (env.codeType == "python" || env.codeType == "static") {
+    return "Return, Do not need Compilation"
+  }
+
   stage('Compile Code') {
 
     if (env.codeType == "maven")  {
@@ -7,17 +11,8 @@ def compile() {
     }
 
     if (env.codeType == "nodejs") {
-      print 'NodeJs'
+      print 'npm install'
     }
-
-    if (env.codeType == "python") {
-      print 'Python'
-    }
-
-    if (env.codeType == "static") {
-      print 'Static'
-    }
-
   }
 
 }
