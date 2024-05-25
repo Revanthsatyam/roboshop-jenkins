@@ -11,7 +11,7 @@ def compile() {
     }
 
     if (env.codeType == "nodejs") {
-      print 'npm install'
+      sh 'npm install'
     }
   }
 
