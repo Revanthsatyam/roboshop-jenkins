@@ -11,7 +11,7 @@ def call() {
 
     checkout scmGit(
       branches: [[name: branch_name]],
-      userRemoteConfigs: [[url: 'https://github.com/Revanthsatyam/${component}']])
+      userRemoteConfigs: [[url: "https://github.com/Revanthsatyam/${component}"]])
 
     stage('Compile Code') {
       common.compile()
