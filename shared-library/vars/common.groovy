@@ -40,7 +40,9 @@ def test() {
 
 def codeQuality() {
   stage('Code Quality') {
-    print 'Code Quality'
+    env.sonaruser = sh (script: 'aws ssm get-parameter --name "sonarqube.user" --with-decryption --query="Parameter.Value" |xargs', returnStdout: true).trim()
+    env.sonarpass = sh (script: 'aws ssm get-parameter --name "sonarqube.password" --with-decryption --query="Parameter.Value" |xargs', returnStdout: true).trim()
+    sh 'sonar-scanner -Dsonar.host.url=http://44.211.248.23:9000 -Dsonar.login=${sonaruser} -Dsonar.password=${sonarpass} -Dsonar.projectKey=${component} -Dsonar.qualitygate.wait=true'
   }
 }
 
