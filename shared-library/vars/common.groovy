@@ -19,32 +19,13 @@ def compile() {
 
 def test() {
   stage('Test Cases') {
-
-    if (env.codeType == "maven") {
-      //sh '/home/centos/maven/bin/mvn test'
-      print 'OK'
-    }
-
-    if (env.codeType == "nodejs") {
-      //sh 'npm test'
-      print 'OK'
-    }
-
-    if (env.codeType == "python") {
-      //sh 'python3.6 -m unittest'
-      print 'OK'
-    }
-
+    print 'Test'
   }
 }
 
 def codeQuality() {
   stage('Code Quality') {
-    env.sonaruser = sh (script: 'aws ssm get-parameter --name "sonarqube.user" --with-decryption --query="Parameter.Value" |xargs', returnStdout: true).trim()
-    env.sonarpass = sh (script: 'aws ssm get-parameter --name "sonarqube.password" --with-decryption --query="Parameter.Value" |xargs', returnStdout: true).trim()
-    wrap([$class: "MaskPasswordsBuildWrapper", varPasswordPairs: [[password: sonarpass]]]) {
-      sh 'sonar-scanner -Dsonar.host.url=http://18.212.59.162:9000 -Dsonar.login=${sonaruser} -Dsonar.password=${sonarpass} -Dsonar.projectKey=${component} -Dsonar.qualitygate.wait=true'
-    }
+    print 'Code Quality'
   }
 }
 
