@@ -21,7 +21,7 @@ def test() {
   stage('Test Cases') {
 
     if (env.codeType == "maven") {
-      sh '/home/centos/maven/bin/ mvn test'
+      sh '/home/centos/maven/bin/mvn test'
     }
 
     if (env.codeType == "nodejs") {
