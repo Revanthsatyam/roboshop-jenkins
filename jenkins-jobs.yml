@@ -6,6 +6,7 @@
     folders:
       - { folder_name: "CI-Pipelines" }
       - { folder_name: "Infra-Jobs" }
+      - { folder_name: "Deployment-Jobs" }
     mjobs:
       - { job_name: "cart", repo_name: "https://github.com/Revanthsatyam/cart", folder_name: "CI-Pipelines" }
       - { job_name: "catalogue", repo_name: "https://github.com/Revanthsatyam/catalogue", folder_name: "CI-Pipelines" }
