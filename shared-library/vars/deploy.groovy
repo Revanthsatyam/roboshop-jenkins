@@ -11,9 +11,9 @@ def call() {
     }
 
     parameters {
-      string(name: 'COMPONENT', defaultValue: 'Which Component To Deploy?')
-      string(name: 'VERSION', defaultValue: 'Which Version To Deploy?')
-      string(name: 'ENV', defaultValue: 'Which Environment To Deploy?')
+      string(name: 'COMPONENT', defaultValue: '', description: 'Which Component To Deploy?')
+      string(name: 'VERSION', defaultValue: '', description: 'Which Version To Deploy?')
+      string(name: 'ENV', defaultValue: '', description: 'Which Environment To Deploy?')
     }
 
     stages {
