@@ -19,7 +19,9 @@ def call() {
     stages {
 
       stage ('Compile') {
-        echo 'OK'
+        steps {
+          echo 'OK'
+        }
       }
 
     }
